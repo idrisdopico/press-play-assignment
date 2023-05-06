@@ -1,11 +1,11 @@
 import React from "react";
-import MegaTitle from "../../components/MegaTitle";
+import Title from "../../components/Title";
 import { View } from "react-native";
 
 const HomeScreen = () => {
   return (
     <View>
-      <MegaTitle title={'Home'} />
+      <Title title={'Home'} />
     </View>
   )
 }

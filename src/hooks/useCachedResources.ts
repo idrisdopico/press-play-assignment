@@ -4,26 +4,26 @@ import * as React from 'react';
 import { useEffect } from 'react';
 
 export const useCachedResources = (
-	fontMap: Record<string, FontSource>,
+  fontMap: Record<string, FontSource>,
 ): boolean => {
-	const [isLoadingComplete, setLoadingComplete] = React.useState(false);
+  const [isLoadingComplete, setLoadingComplete] = React.useState(false);
 
-	useEffect(() => {
-		const loadResourcesAsync = async (): Promise<void> => {
-			try {
-				const fontPromise = loadAsync(fontMap);
+  useEffect(() => {
+    const loadResourcesAsync = async (): Promise<void> => {
+      try {
+        const fontPromise = loadAsync(fontMap);
 
-				await Promise.all([fontPromise]);
-			} catch (error) {
-				console.warn(error);
-			} finally {
-				await SplashScreen.hideAsync();
-				setLoadingComplete(true);
-			}
-		};
+        await Promise.all([fontPromise]);
+      } catch (error) {
+        console.warn(error);
+      } finally {
+        await SplashScreen.hideAsync();
+        setLoadingComplete(true);
+      }
+    };
 
-		void loadResourcesAsync();
-	}, [fontMap]);
+    void loadResourcesAsync();
+  }, [fontMap]);
 
-	return isLoadingComplete;
+  return isLoadingComplete;
 };

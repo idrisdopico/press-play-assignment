@@ -1,11 +1,16 @@
-import React from 'react';
-import { StyleProp, ViewStyle, Text } from 'react-native';
+import React from "react";
+import { Text, StyleProp, ViewStyle } from "react-native";
+import theme from "../../theme";
 
 interface Props {
   title: string;
   style?: StyleProp<ViewStyle>;
 }
 
-const Title = ({ title, style }: Props) => <Text style={[style, { fontFamily: 'SpaceMono' }]}>{title}</Text>
+const Title = ({ title, style }: Props) => {
+  return (
+    <Text style={[theme.typography.title, style]}>{title}</Text>
+  )
+}
 
 export default Title;

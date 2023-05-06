@@ -1,13 +1,21 @@
 import React from "react";
-import MegaTitle from "../../components/MegaTitle";
-import { View } from "react-native";
+import Title from "../../components/Title";
+import {StyleSheet, View} from "react-native";
 
 const AnywhereScreen = () => {
   return (
-    <View>
-      <MegaTitle title={'Anywhere'} />
+    <View style={styles.container}>
+      <Title title={'Anywhere'} />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+});
 
 export default AnywhereScreen;

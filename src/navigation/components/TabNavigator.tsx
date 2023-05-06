@@ -20,7 +20,7 @@ const TabNavigator = () => {
           tabBarActiveTintColor: theme.colors.white,
           tabBarInactiveTintColor: theme.colors.whiteOpacity,
           tabBarStyle: {
-            borderTopWidth: 1,
+            borderTopWidth: 0,
             backgroundColor: theme.colors.blue,
             shadowRadius: 16,
             paddingTop: 8,

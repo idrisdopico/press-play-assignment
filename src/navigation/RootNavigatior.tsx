@@ -13,9 +13,6 @@ const RootNavigator = () => {
   const routeNameRef = useRef('startup');
 
   const logStateChange = () => {
-    const previousRouteName = routeNameRef.current;
-    const currentRouteName = navigator?.current?.getCurrentRoute()?.name;
-
     routeNameRef.current =
       navigator?.current?.getCurrentRoute()?.name ?? 'unknown';
   };

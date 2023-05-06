@@ -4,6 +4,7 @@ import React from 'react';
 import { Screens } from '../Screens';
 import { StackNavigatorParamList } from '../types';
 import HomeScreen from "../../screens/Home";
+import theme from "../../theme";
 
 const Stack = createStackNavigator<StackNavigatorParamList>();
 
@@ -16,6 +17,7 @@ export const Home = (): React.ReactElement => {
         options={{
           headerShown: false,
           title: 'Home',
+          cardStyle: { backgroundColor: theme.colors.black },
         }}
       />
     </Stack.Navigator>
