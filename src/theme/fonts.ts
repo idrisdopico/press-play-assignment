@@ -11,13 +11,13 @@ export type FontList = Readonly<{
 }>;
 
 export const fonts: FontList = {
-  workSans: {
-    regular: 'Canopee Regular',
-    bold: 'Circular std Bold',
-    semiBold: 'Circular std SemiBold',
-    medium: 'Circular std Medium',
-  },
-  canopee: {
-    regular: 'Canopee Regular',
-  },
+	workSans: {
+		regular: 'Canopee Regular',
+		bold: 'Circular std Bold',
+		semiBold: 'Circular std SemiBold',
+		medium: 'Circular std Medium',
+	},
+	canopee: {
+		regular: 'Canopee Regular',
+	},
 };

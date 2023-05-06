@@ -13,65 +13,65 @@ export type TypographyTheme = Readonly<{
 }>;
 
 const base = {
-  color: '#fff',
-  fontFamily: fonts.workSans.regular,
-  fontSize: 12,
-  lineHeight: 12,
+	color: '#fff',
+	fontFamily: fonts.workSans.regular,
+	fontSize: 12,
+	lineHeight: 12,
 };
 
 const title = {
-  fontFamily: fonts.canopee.regular,
-  fontSize: 40,
-  lineHeight: 34,
-  letterSpacing: -0.88,
+	fontFamily: fonts.canopee.regular,
+	fontSize: 40,
+	lineHeight: 34,
+	letterSpacing: -0.88,
 };
 
 const headingMedium = {
-  fontFamily: fonts.workSans.medium,
-  fontSize: 16,
-  lineHeight: 17,
+	fontFamily: fonts.workSans.medium,
+	fontSize: 16,
+	lineHeight: 17,
 };
 
 const headingBold = {
-  fontFamily: fonts.workSans.bold,
-  fontSize: 16,
-  lineHeight: 17,
+	fontFamily: fonts.workSans.bold,
+	fontSize: 16,
+	lineHeight: 17,
 };
 
 const button = {
-  fontFamily: fonts.workSans.medium,
-  fontSize: 14,
-  lineHeight: 16,
+	fontFamily: fonts.workSans.medium,
+	fontSize: 14,
+	lineHeight: 16,
 };
 
 export const typography: TypographyTheme = {
-  base,
-  title: {
-    ...base,
-    ...title,
-  },
-  headingMedium: {
-    ...base,
-    ...headingMedium,
-  },
-  headingBold: {
-    ...base,
-    ...headingBold,
-  },
-  paragraph: {
-    ...base,
-  },
-  button: {
-    ...base,
-    ...button,
-  },
-  tabLabel: {
-    ...base,
-    ...{
-      fontSize: 12,
-      lineHeight: 18,
-    },
-  },
+	base,
+	title: {
+		...base,
+		...title,
+	},
+	headingMedium: {
+		...base,
+		...headingMedium,
+	},
+	headingBold: {
+		...base,
+		...headingBold,
+	},
+	paragraph: {
+		...base,
+	},
+	button: {
+		...base,
+		...button,
+	},
+	tabLabel: {
+		...base,
+		...{
+			fontSize: 12,
+			lineHeight: 18,
+		},
+	},
 };
 
 export default typography;
