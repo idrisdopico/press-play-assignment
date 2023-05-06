@@ -22,7 +22,7 @@ const base = {
 const title = {
 	fontFamily: fonts.canopee.regular,
 	fontSize: 40,
-	lineHeight: 34,
+	lineHeight: 36, // If we use 34, the text will be cut off. We should use 36 instead untill we have a solution.
 	letterSpacing: -0.88,
 };
 
