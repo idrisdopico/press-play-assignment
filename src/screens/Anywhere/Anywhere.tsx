@@ -5,7 +5,7 @@ import { View } from "react-native";
 const AnywhereScreen = () => {
   return (
     <View>
-      <MegaTitle title={'Home'} />
+      <MegaTitle title={'Anywhere'} />
     </View>
   )
 }

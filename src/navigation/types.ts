@@ -1,4 +1,4 @@
-import { Screens } from "./Screens";
+import { Screens } from './Screens';
 
 export enum RootNavigators {
   Tabs = 'TabNavigator',

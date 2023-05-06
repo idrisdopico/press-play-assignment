@@ -14,6 +14,7 @@ export const Home = (): React.ReactElement => {
         name={Screens.Home}
         component={HomeScreen}
         options={{
+          headerShown: false,
           title: 'Home',
         }}
       />

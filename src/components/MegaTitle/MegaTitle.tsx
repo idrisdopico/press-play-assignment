@@ -1,4 +1,6 @@
+import React from "react";
 import { Text, StyleProp, ViewStyle } from "react-native";
+import theme from "../../theme";
 
 interface Props {
   title: string;
@@ -7,7 +9,7 @@ interface Props {
 
 const MegaTitle = ({ title, style }: Props) => {
   return (
-    <Text style={[style, { fontFamily: 'SpaceMono' }]}>{title}</Text>
+    <Text style={[theme.typography.title, style]}>{title}</Text>
   )
 }
 

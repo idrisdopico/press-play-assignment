@@ -1,9 +1,9 @@
 export enum RouteProps {
   // Primary pages
-  Home = 'Home',
-  Anything = 'Anything',
-  Anywhere = 'Anywhere',
-  More = 'More',
+  Home = 'HOME',
+  Anything = 'ANYTHING',
+  Anywhere = 'ANYWHERE',
+  More = 'MORE',
 }
 
 export default RouteProps;
