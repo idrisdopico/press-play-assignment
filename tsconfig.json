@@ -1,6 +1,23 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "target": "es5",
+    "strict": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "include": [
+    "./.*.js",
+    "*.js",
+    "*.ts",
+    "*.tsx",
+    "src/**/*",
+    "storybook/**/*",
+    "dev/*.js",
+    "dev/jestSetup.ts",
+    "__mocks__/**/*"
+  ],
+  "exclude": ["node_modules"]
 }

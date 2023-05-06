@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
 import { StyleSheet, Text, View } from 'react-native';
+import RootNavigator from "./src/navigation/RootNavigatior";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <RootNavigator />
+    </SafeAreaProvider>
   );
 }
 
