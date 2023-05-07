@@ -6,10 +6,9 @@ import Title from "../Title";
 import Image from "../Image/Image";
 import { MovieDetailsProps } from "../HorizontalGallery/HorizontalGallery";
 
-import theme from "../../theme";
-import Heading from "../Heading";
-import { HeadingVariant } from "../Heading/Heading";
 import MovieDetails from "../MovieDetails";
+
+import theme from "../../theme";
 
 export interface HeaderProps {
   title?: string;

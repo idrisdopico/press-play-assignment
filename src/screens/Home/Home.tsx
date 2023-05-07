@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import Header from "../../components/Header";
 import { ScrollView } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
+
+import Header from "../../components/Header";
 import HorizontalGallery from "../../components/HorizontalGallery";
 
 const IMAGE_SRC = require('../../assets/images/avengers.jpeg');

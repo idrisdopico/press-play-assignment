@@ -1,6 +1,7 @@
-import theme from "../../theme";
-import {StyleProp, Text, ViewStyle} from "react-native";
 import React from "react";
+import { StyleProp, Text, ViewStyle } from "react-native";
+
+import theme from "../../theme";
 
 interface Props {
   title: string;

@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
 import { StyleProp, ViewStyle } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import HorizontalGallery, { MovieDetailsProps } from "./HorizontalGallery";
 import { Screens } from "../../navigation/Screens";

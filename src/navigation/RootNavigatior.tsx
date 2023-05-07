@@ -1,21 +1,13 @@
-import {
-  NavigationContainer,
-  NavigationContainerRef,
-} from '@react-navigation/native';
-import React, { useRef } from 'react';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
 import RootStack from './RootStack';
-import { StackNavigatorParamList } from './types';
 
-const RootNavigator = () => {
-  const navigator =
-    useRef<NavigationContainerRef<StackNavigatorParamList>>(null);
+const RootNavigator = () => (
+  <NavigationContainer>
+    <RootStack />
+  </NavigationContainer>
+);
 
-  return (
-    <NavigationContainer ref={navigator}>
-      <RootStack />
-    </NavigationContainer>
-  );
-};
 
 export default RootNavigator;

@@ -33,6 +33,8 @@ const MovieDetails = ({ title, duration, category, style }: Props) => (
 const styles = StyleSheet.create({
   descriptionTitle: {
     marginBottom: 8,
+    paddingHorizontal: 24,
+    textAlign: 'center',
   },
   container: {
     flexDirection: 'row',

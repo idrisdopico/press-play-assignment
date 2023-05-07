@@ -1,12 +1,11 @@
+import { useEffect, useState } from 'react';
 import { FontSource, loadAsync } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import * as React from 'react';
-import { useEffect } from 'react';
 
 export const useCachedResources = (
 	fontMap: Record<string, FontSource>,
 ): boolean => {
-	const [isLoadingComplete, setLoadingComplete] = React.useState(false);
+	const [isLoadingComplete, setLoadingComplete] = useState(false);
 
 	useEffect(() => {
 		const loadResourcesAsync = async (): Promise<void> => {

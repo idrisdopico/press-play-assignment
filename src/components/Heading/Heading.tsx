@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle, Text } from 'react-native';
+
 import theme from "../../theme";
 
 export enum HeadingVariant {

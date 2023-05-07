@@ -1,6 +1,7 @@
 import React from "react";
-import Title from "../../components/Title";
 import { StyleSheet, View } from "react-native";
+
+import Title from "../../components/Title";
 
 const AnythingScreen = () => {
   return (
