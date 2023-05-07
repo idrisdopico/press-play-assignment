@@ -22,7 +22,7 @@ const DetailsScreen = ({
   const navigation = useNavigation();
 
   return (
-    <ScrollView style={{ position: 'relative' }}>
+    <>
       {/*
         Not inline with design, but the scrollView makes it "impossible/hard" to close the modal on iOS.
         This button is the solution for now, but maybe we can think of another solution. :^)
@@ -34,8 +34,10 @@ const DetailsScreen = ({
           color={theme.colors.white}
         />
       </Pressable>
-      <Header details={movieDetails} imageSource={movieDetails.image} />
-    </ScrollView>
+      <ScrollView style={{ position: 'relative' }}>
+        <Header details={movieDetails} imageSource={movieDetails.image} />
+      </ScrollView>
+    </>
   )
 }
 
