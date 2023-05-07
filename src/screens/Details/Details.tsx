@@ -3,6 +3,7 @@ import {Pressable, StyleSheet} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 import Header from "../../components/Header/Header";
 
