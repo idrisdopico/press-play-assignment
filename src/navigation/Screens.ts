@@ -3,4 +3,5 @@ export enum Screens {
   Anything = 'AnythingScreen',
   Anywhere = 'AnywhereScreen',
   More = 'MoreScreen',
+  Details = 'DetailsScreen',
 }

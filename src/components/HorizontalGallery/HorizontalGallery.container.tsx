@@ -1,6 +1,9 @@
 import React from "react";
-import HorizontalGallery from "./HorizontalGallery";
-import {StyleProp, ViewStyle} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { StyleProp, ViewStyle } from "react-native";
+
+import HorizontalGallery, { MovieDetailsProps } from "./HorizontalGallery";
+import { Screens } from "../../navigation/Screens";
 
 const freeGuy = require('../../assets/images/galleryImages/freeguy.jpg');
 const godzilla = require('../../assets/images/galleryImages/godzilla.jpg');
@@ -54,10 +57,15 @@ const data = [
   }
 ];
 
-
 const HorizontalGalleryContainer = ({ style }: { style?: StyleProp<ViewStyle> }) => {
+  const navigation = useNavigation();
+
+  const onPressMovie = (item: MovieDetailsProps) => {
+    navigation.navigate(Screens.Details, { movieDetails: item });
+  }
+
   return (
-    <HorizontalGallery data={data} style={style} />
+    <HorizontalGallery data={data} style={style} onPress={onPressMovie} />
   )
 }
 

@@ -10,17 +10,9 @@ import { StackNavigatorParamList } from './types';
 const RootNavigator = () => {
   const navigator =
     useRef<NavigationContainerRef<StackNavigatorParamList>>(null);
-  const routeNameRef = useRef('startup');
-
-  const logStateChange = () => {
-    routeNameRef.current =
-      navigator?.current?.getCurrentRoute()?.name ?? 'unknown';
-  };
 
   return (
-    <NavigationContainer
-      ref={navigator}
-      onStateChange={logStateChange}>
+    <NavigationContainer ref={navigator}>
       <RootStack />
     </NavigationContainer>
   );

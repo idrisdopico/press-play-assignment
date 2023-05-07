@@ -1,5 +1,7 @@
 import { Screens } from './Screens';
 
+import { MovieDetailsProps } from "../components/HorizontalGallery/HorizontalGallery";
+
 export enum RootNavigators {
   Tabs = 'TabNavigator',
 }
@@ -10,6 +12,9 @@ export type StackNavigatorParamList = Readonly<{
   [Screens.Anything]: undefined;
   [Screens.Anywhere]: undefined;
   [Screens.More]: undefined;
+  [Screens.Details]: {
+    movieDetails: MovieDetailsProps;
+  };
 }>;
 
 declare global {

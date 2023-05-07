@@ -6,7 +6,7 @@ import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import Heading from "../Heading";
 import Image from "../Image";
 
-interface ItemProps {
+export interface MovieDetailsProps {
   title: string;
   image: ImageSourcePropType;
   duration: number;
@@ -15,8 +15,9 @@ interface ItemProps {
 }
 
 export interface GalleryProps {
-  data: ItemProps[],
+  data: MovieDetailsProps[],
   style?: StyleProp<ViewStyle>;
+  onPress: (item: MovieDetailsProps) => void;
 }
 
 const BOX_HORIZONTAL_MARGIN = 10;
@@ -27,19 +28,22 @@ const IMAGE_HEIGHT = 182;
 const Spacer = () => <View style={{ width: BOX_HORIZONTAL_MARGIN }} />;
 const BodySpacer = () => <View style={{ width: BODY_HORIZONTAL_MARGIN }} />;
 
-const renderItem: ListRenderItem<ItemProps> = ({ item }) => {
-  return (
-    <TouchableWithoutFeedback style={styles.pressable}>
-      <Image src={item.image} style={styles.image} />
-    </TouchableWithoutFeedback>
-  )
-}
+const renderItem = (onPress: GalleryProps['onPress']): ListRenderItem<MovieDetailsProps> =>
+  ({ item }) =>
+    (
+      <TouchableWithoutFeedback style={styles.pressable} onPress={() => onPress(item)}>
+        <Image src={item.image} style={styles.image} />
+      </TouchableWithoutFeedback>
+    );
 
-const HorizontalGallery = ({ data, style }: GalleryProps) => {
-  const renderItemMemoized = useMemo(() => renderItem, []);
+const HorizontalGallery = ({ data, onPress, style }: GalleryProps) => {
+  const renderItemMemoized = useMemo(
+    () => renderItem(onPress),
+    [onPress],
+  );
 
   return (
-    <View style={[styles.container, style]}>
+    <View style={style}>
       <Heading title={'NEW MOVIES'} style={styles.heading} />
       <FlatList
         data={data}
@@ -57,15 +61,11 @@ const HorizontalGallery = ({ data, style }: GalleryProps) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   heading: {
     marginBottom: 20,
     paddingLeft: 20,
   },
   pressable: {
-    alignItems: 'center',
     borderRadius: 4,
     overflow: 'hidden',
   },

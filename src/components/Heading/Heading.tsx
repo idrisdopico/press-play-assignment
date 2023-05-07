@@ -13,6 +13,10 @@ interface Props {
   variant?: HeadingVariant;
 }
 
-const Heading = ({ title, style, variant }: Props) => <Text style={[variant === HeadingVariant.Medium ? theme.typography.headingMedium : theme.typography.headingBold, style]}>{title}</Text>
+const Heading = ({ title, style, variant }: Props) => (
+  <Text style={[variant === HeadingVariant.Medium ? theme.typography.headingMedium : theme.typography.headingBold, style]}>
+    {title}
+  </Text>
+)
 
 export default Heading;
