@@ -21,7 +21,7 @@ const data = [
     description: 'in Free Guy, de nieuwe epische avonturen-komedie film van Twentieth Century Studios, ontdekt een bankbediende (Ryan Reynolds) dat hij eigenlijk een figurant is in een open-world videogame, besluit hij om de held van zijn eigen verhaal te worden… één die hij zelf herschrijft. Nu hij alles op het spel heeft gezet, doet hij er alles aan om de wereld naar zijn hand te zetten in zijn eigen versie – zonder beperkingen. In een wereld waarin er geen grenzen zijn, bepaalt hij uiteindelijk zelf zijn lot.',
   },
   {
-    title: 'Godzulla vs. Kong',
+    title: 'Godzilla vs. Kong',
     image: godzilla,
     duration: 113,
     category: 'Action / Sci-Fi',

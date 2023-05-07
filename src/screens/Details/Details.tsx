@@ -1,7 +1,7 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+
 import Header from "../../components/Header/Header";
-import Title from "../../components/Title";
 
 import { StackScreenProps } from "@react-navigation/stack";
 import { StackNavigatorParamList } from "../../navigation/types";
@@ -15,13 +15,10 @@ const DetailsScreen = ({
       movieDetails
     }
   }}: Props) => {
-  const { title, image, description, category, duration } = movieDetails;
-
   return (
-    <View>
-      <Title title={title} />
-      <Header title={title} imageSource={image} />
-    </View>
+    <ScrollView>
+      <Header details={movieDetails} imageSource={movieDetails.image} />
+    </ScrollView>
   )
 }
 

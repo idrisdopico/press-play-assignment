@@ -14,6 +14,8 @@ import theme from "../../theme";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  const checkFocus = (isFocused: boolean) => isFocused ? theme.colors.white : theme.colors.white60;
+
   return (
     <>
       <StatusBar style="light" />
@@ -21,7 +23,7 @@ const TabNavigator = () => {
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: theme.colors.white,
-          tabBarInactiveTintColor: theme.colors.whiteOpacity,
+          tabBarInactiveTintColor: theme.colors.white60,
           tabBarStyle: {
             borderTopWidth: 0,
             backgroundColor: theme.colors.blue,
@@ -39,7 +41,7 @@ const TabNavigator = () => {
               <Ionicons
                 name="square-outline"
                 size={24}
-                color={tabInfo.focused ? theme.colors.white : theme.colors.whiteOpacity}
+                color={checkFocus(tabInfo.focused)}
               />
             ),
           }}
@@ -52,7 +54,7 @@ const TabNavigator = () => {
               <Ionicons
                 name="flower"
                 size={24}
-                color={tabInfo.focused ? theme.colors.white : theme.colors.whiteOpacity}
+                color={checkFocus(tabInfo.focused)}
               />
             ),
           }}
@@ -65,7 +67,7 @@ const TabNavigator = () => {
               <Ionicons
                 name="flower-outline"
                 size={24}
-                color={tabInfo.focused ? theme.colors.white : theme.colors.whiteOpacity}
+                color={checkFocus(tabInfo.focused)}
               />
             ),
           }}
@@ -78,7 +80,7 @@ const TabNavigator = () => {
               <Ionicons
                 name="beer"
                 size={24}
-                color={tabInfo.focused ? theme.colors.white : theme.colors.whiteOpacity}
+                color={checkFocus(tabInfo.focused)}
               />
             ),
           }}

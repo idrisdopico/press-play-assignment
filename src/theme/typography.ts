@@ -5,11 +5,10 @@ import { fonts } from './fonts';
 export type TypographyTheme = Readonly<{
   base: StyleProp<TextStyle>;
   title: StyleProp<TextStyle>;
-  button: StyleProp<TextStyle>;
-  paragraph: StyleProp<TextStyle>;
   headingMedium: StyleProp<TextStyle>;
   headingBold: StyleProp<TextStyle>;
-  tabLabel: StyleProp<TextStyle>;
+  descriptionTitle: StyleProp<TextStyle>;
+  descriptionLabel: StyleProp<TextStyle>;
 }>;
 
 const base = {
@@ -22,7 +21,9 @@ const base = {
 const title = {
 	fontFamily: fonts.canopee.regular,
 	fontSize: 40,
-	lineHeight: 36, // If we use 34, the text will be cut off. We should use 36 instead untill we have a solution.
+  // If we use 34 line-height like in the design, the text will be cut off.
+  // We should use 36 instead untill we have a solution.
+	lineHeight: 36,
 	letterSpacing: -0.88,
 };
 
@@ -38,11 +39,17 @@ const headingBold = {
 	lineHeight: 17,
 };
 
-const button = {
-	fontFamily: fonts.workSans.medium,
-	fontSize: 14,
-	lineHeight: 16,
-};
+const descriptionTitle = {
+  fontFamily: fonts.workSans.bold,
+  fontSize: 32,
+  lineHeight: 32,
+  letterSpacing: -1.3,
+}
+
+const descriptionLabel = {
+  fontSize: 13,
+  lineHeight: 20,
+}
 
 export const typography: TypographyTheme = {
 	base,
@@ -58,20 +65,14 @@ export const typography: TypographyTheme = {
 		...base,
 		...headingBold,
 	},
-	paragraph: {
-		...base,
-	},
-	button: {
-		...base,
-		...button,
-	},
-	tabLabel: {
-		...base,
-		...{
-			fontSize: 12,
-			lineHeight: 18,
-		},
-	},
+  descriptionTitle: {
+    ...base,
+    ...descriptionTitle,
+  },
+  descriptionLabel: {
+    ...base,
+    ...descriptionLabel,
+  },
 };
 
 export default typography;

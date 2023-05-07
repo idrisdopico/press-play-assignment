@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, ViewStyle, Text } from 'react-native';
 import theme from "../../theme";
 
-enum HeadingVariant {
+export enum HeadingVariant {
   Bold = 'bold',
   Medium = 'medium',
 }

@@ -12,7 +12,7 @@ export type FontList = Readonly<{
 
 export const fonts: FontList = {
 	workSans: {
-		regular: 'Canopee Regular',
+		regular: 'Circular std Regular',
 		bold: 'Circular std Bold',
 		semiBold: 'Circular std SemiBold',
 		medium: 'Circular std Medium',

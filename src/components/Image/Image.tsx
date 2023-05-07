@@ -7,13 +7,14 @@ interface Props {
   src: ImageProps['source'];
   style?: ImageProps['style'];
   children?: React.ReactElement;
+  imageHeight?: number;
 }
 
-const ImageComponent = ({ src, style, children }: Props) => {
+const ImageComponent = ({ src, style, children, imageHeight }: Props) => {
   if (children) {
     return (
       <View style={style}>
-        <ImageBackground style={styles.image} source={src}>
+        <ImageBackground style={[styles.image, { height: imageHeight || IMAGE_HEIGHT }]} source={src}>
           {children}
         </ImageBackground>
       </View>
@@ -22,7 +23,7 @@ const ImageComponent = ({ src, style, children }: Props) => {
 
   return (
     <View style={style}>
-      <Image style={styles.image} source={src} />
+      <Image style={[styles.image, { height: imageHeight || IMAGE_HEIGHT }]} source={src} />
     </View>
   )
 }
