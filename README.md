@@ -10,4 +10,5 @@
 - I've used [react-native-vector-icons]() for icons
 - The app is tested on iOS only
 - The linter is not configured correctly, I've tried to fix it, but I couldn't get it to work. I've left it in the project, maybe we can figure out what's wrong with it together.
+- I was unable to correctly fit the images in the HorizontalGallery component. I'd like some feedback on where I went wrong here.
 - It's taken me about 10 hours to complete the assignment.
